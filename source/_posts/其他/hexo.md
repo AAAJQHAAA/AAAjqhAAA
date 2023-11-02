@@ -61,7 +61,7 @@ tags:
 ```
 ![010newmd.png](010newmd.png)
 - md文件中如何插入图片等资源【[官网资源配置](https://hexo.io/zh-cn/docs/asset-folders)】
-  - 我是建一个和md文件相同的目录，然后将图片放下面
+  - 我是建一个和md文件名相同的文件夹，然后将图片放下面
   ![011config.png](011config.png)
 
 # 部署到github
@@ -102,4 +102,4 @@ deploy:
 - 8、github配置访问
   - `settings`-`pages`-`Source`-选择部署主分支
   - 然后就可以访问了`账号名.github.io`
-
+![012deploy.png](012deploy.png)
