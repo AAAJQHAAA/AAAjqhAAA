@@ -1,10 +1,10 @@
 ---
-title: OnlyOffice介绍
+title: OnlyOffice介绍及docker部署Document Server
 date: 2023-11-02 13:27:26
 category: 其他
 tags:
   - OnlyOffice
-  - OnlyOffice-docker部署
+  - OnlyOffice Docker部署Document Server
 ---
 
 # 描述和功能
