@@ -4,6 +4,7 @@ date: 2023-11-08 14:40:20
 category: 后端
 tags:
   - springboot注解
+  - 跨域
 ---
 # 作用
 - 原理：利用spring的拦截器实现往响应头里添加`Access-Control-Allow-Origin`等响应头信息
