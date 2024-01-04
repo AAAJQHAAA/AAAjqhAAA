@@ -4,7 +4,7 @@ date: 2023-11-09 15:03:28
 category: 后端
 tags:
   - java.util类
-  - 国际化
+  - java国际化
 ---
 
 # 作用
