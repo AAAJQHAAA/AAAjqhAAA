@@ -3,7 +3,9 @@ title: 日志
 date: 2023-11-10 13:48:51
 category: 后端
 tags:
-  - springboot日志
+  - SpringBoot
+  - SpringBoot项目必备
+  - SpringBoot日志
   - 系统日志
   - 操作日志
 ---
@@ -52,7 +54,7 @@ tags:
   - 方案三：Spring AOP（切面）
     - 对作用域没有限制，定义好切点
     - 颗粒度更细：前置通知（@Before）、后置通知（@After）、返回后通知（@AfterReturning）、异常通知（@AfterThrowing）、环绕通知（@Around）
-    - 结论：【可以获取方法参数】【可以获取方法返回值】
+    - 结论：【可以获取方法参数】【可以获取方法返回值】【可以修改返回值】
 
 ```java
 package javax.servlet;
@@ -218,12 +220,13 @@ public class LogAspect implements Ordered {
   }
 
   /**
-   * 目标方法返回执行结果之后
+   * 目标方法返回执行结果之后（可以修改返回值）
    * @param joinPoint
    */
-  @AfterReturning("pointcut()")
-  public void afterReturning(JoinPoint joinPoint){
+  @AfterReturning(pointcut = "pointcut()", returning = "obj")
+  public Object afterReturning(JoinPoint joinPoint, Object obj){
     print("@AfterReturning", joinPoint);
+    return obj;
   }
 
   /**
@@ -233,7 +236,7 @@ public class LogAspect implements Ordered {
    */
   @AfterThrowing(value = "pointcut()",throwing = "e")
   public void afterThrowing(JoinPoint joinPoint,Exception e){
-    print("@AfterReturning", joinPoint);
+    print("@AfterThrowing", joinPoint);
   }
 
   /**

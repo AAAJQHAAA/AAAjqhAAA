@@ -3,7 +3,8 @@ title: EnableAspectJAutoProxy
 date: 2024-01-02 12:47:32
 category: 后端
 tags:
-  - springboot注解
+  - SpringBoot
+  - SpringBoot注解
   - AOP切面
 ---
 

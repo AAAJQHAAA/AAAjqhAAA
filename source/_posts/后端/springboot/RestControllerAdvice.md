@@ -2,7 +2,8 @@
 title: RestControllerAdvice
 date: 2023-12-18 09:07:28
 tags:
-  - springboot
+  - SpringBoot
+  - SpringBoot项目必备
   - 全局异常处理
   - 统一响应
 ---

@@ -3,7 +3,8 @@ title: 注解@CrossOrigin
 date: 2023-11-08 14:40:20
 category: 后端
 tags:
-  - springboot注解
+  - SpringBoot
+  - SpringBoot注解
   - 跨域
 ---
 # 作用
