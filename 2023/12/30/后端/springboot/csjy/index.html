@@ -1,0 +1,440 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+<head>
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="JQH">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="theme-version" content="1.3.0">
+    <meta name="root" content="/">
+    <link rel="dns-prefetch" href="https://aaajqhaaa.github.io">
+    <!--SEO-->
+
+<meta name="keywords" content="SpringBoot,SpringBoot项目必备,SpringBoot参数校验" />
+
+
+<meta name="description" content="SpringBoot参数校验12345&lt;dependency&gt;   &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;  ..." />
+
+
+<meta name="robots" content="all" />
+<meta name="google" content="all" />
+<meta name="googlebot" content="all" />
+<meta name="verify" content="all" />
+    <!--Title-->
+
+<title>
+    
+    SpringBoot参数校验 |
+    
+    JQH
+</title>
+
+<link rel="alternate" href="/atom.xml" title="JQH" type="application/atom+xml">
+
+
+<link rel="icon" href="/favicon.ico">
+
+    
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css?rev=3.3.7.css">
+<link rel="stylesheet" href="/css/font-awesome.min.css?rev=4.7.0.css">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash.css">
+
+    
+<div class="hide">
+    <script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan class='cnzz_stat_icon_1263868967 hide' %3E%3Cscript%20src%3D%22https%3A%2F%2Fs95.cnzz.com%2Fz_stat.php%3Fweb_id%3D1272564536%22%3E%3C%2Fscript%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1263868967%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+</div>
+
+
+
+
+    
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+<body>
+    <header class="main-header"  style="background-image:url(
+    /./img/banner.jpg)"
+     >
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title='jqh'>
+            <img src="/img/avatar.jpg" alt="logo头像" class="img-responsive center-block">
+        </a>
+        <div class="branding">
+            <!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            
+            <h2>
+                从未有如此美妙的开局
+            </h2>
+            
+        </div>
+    </div>
+</header>
+    <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed pull-right" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                        <span class="sr-only"></span>
+                        <i class="fa fa-bars"></i>
+                    </span>
+                    <a class="navbar-brand" href="https://aaajqhaaa.github.io">
+                        JQH</a>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/"><i class="fa "></i>
+                                首页</a>
+                        </li>
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/categories/前端/"><i class="fa "></i>
+                                前端</a>
+                        </li>
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/categories/后端/"><i class="fa "></i>
+                                后端</a>
+                        </li>
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/categories/其他/"><i class="fa "></i>
+                                其他</a>
+                        </li>
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/archives/"><i class="fa "></i>
+                                时间轴</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="SpringBoot参数校验">
+            
+            SpringBoot参数校验
+            
+        </h1>
+        <div class="post-meta">
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <a class="category-link" href="/categories/%E5%90%8E%E7%AB%AF/">后端</a>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+            <a class="tag-none-link" href="/tags/SpringBoot/" rel="tag">SpringBoot</a> <a class="tag-none-link" href="/tags/SpringBoot%E5%8F%82%E6%95%B0%E6%A0%A1%E9%AA%8C/" rel="tag">SpringBoot参数校验</a> <a class="tag-none-link" href="/tags/SpringBoot%E9%A1%B9%E7%9B%AE%E5%BF%85%E5%A4%87/" rel="tag">SpringBoot项目必备</a>
+            
+        </span>
+    </span>
+    
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta">
+            2023/12/30</span>
+    </span>
+    
+    
+</div>
+        
+        
+    </div>
+    
+    <div class="post-body post-content">
+        <h1 id="SpringBoot参数校验"><a href="#SpringBoot参数校验" class="headerlink" title="SpringBoot参数校验"></a>SpringBoot参数校验</h1><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-validation<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">version</span>&gt;</span>&#123;&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="Valid注解"><a href="#Valid注解" class="headerlink" title="@Valid注解"></a>@Valid注解</h2><ul>
+<li>由javax提供（标准<code>JSR-303</code>规范）</li>
+<li>使用地方：<code>方法</code>、<code>方法参数</code>、<code>成员属性（字段）</code></li>
+<li>功能：【支持嵌套验证】</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>注解</th>
+<th>作用</th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>@AssertFalse</code></td>
+<td>限制必须为false</td>
+<td><code>boolean、Boolean</code></td>
+</tr>
+<tr>
+<td><code>@AssertTrue</code></td>
+<td>限制必须为true</td>
+<td><code>同上</code></td>
+</tr>
+<tr>
+<td><code>@Future</code></td>
+<td>限制必须是一个将来的日期</td>
+<td><code>Date、Calendar、Instant、LocalDate、LocalDateTime、LocalTime、MonthDay、OffsetDateTime、OffsetTime、Year、YearMonth、ZonedDateTime、HijrahDate、JapaneseDate、MinguoDate、ThaiBuddhistDate</code></td>
+</tr>
+<tr>
+<td><code>@FutureOrPresent</code></td>
+<td>未来或当前的日期，此处的present概念是相对于使用约束的类型定义的。例如校验的参数为Year year &#x3D; Year.now();此时约束是一年，那么“当前”将表示当前的整个年份。</td>
+<td><code>同上</code></td>
+</tr>
+<tr>
+<td><code>@PastOrPresent</code></td>
+<td>过去或者当前时间，和@FutureOrPresent类似</td>
+<td><code>同上</code></td>
+</tr>
+<tr>
+<td><code>@Past</code></td>
+<td>限制必须是一个过去的日期</td>
+<td><code>同上</code></td>
+</tr>
+<tr>
+<td><code>@Max(value)</code></td>
+<td>限制必须为一个不大于指定值的数字</td>
+<td><code>BigDecimal、BigInteger、byte, short, int, long</code></td>
+</tr>
+<tr>
+<td><code>@Min(value)</code></td>
+<td>限制必须为一个不小于指定值的数字</td>
+<td><code>同上</code></td>
+</tr>
+<tr>
+<td><code>@Size(max,min)</code></td>
+<td>限制字符长度必须在min到max之间</td>
+<td><code>同上</code></td>
+</tr>
+<tr>
+<td><code>@DecimalMax(value)</code></td>
+<td>限制必须为一个不大于指定值的数字</td>
+<td><code>同上</code></td>
+</tr>
+<tr>
+<td><code>@DecimalMin(value)</code></td>
+<td>限制必须为一个不小于指定值的数字</td>
+<td><code>同上</code></td>
+</tr>
+<tr>
+<td><code>@Digits(integer,fraction)</code></td>
+<td>限制必须为一个小数，且整数部分的位数不能超过integer，小数部分的位数不能超过fraction</td>
+<td><code>同上</code></td>
+</tr>
+<tr>
+<td><code>@PositiveOrZero</code></td>
+<td>包含正数和零，空元素有效可以校验通过</td>
+<td><code>同上</code></td>
+</tr>
+<tr>
+<td><code>@Negative</code></td>
+<td>绝对的负数，不能包含零，空元素有效可以校验通过</td>
+<td><code>同上</code></td>
+</tr>
+<tr>
+<td><code>@NegativeOrZero</code></td>
+<td>包含负数和零，空元素有效可以校验通过</td>
+<td><code>同上</code></td>
+</tr>
+<tr>
+<td><code>@Positive</code></td>
+<td>绝对的正数，不能包含零，空元素有效可以校验通过</td>
+<td><code>同上</code></td>
+</tr>
+<tr>
+<td><code>@NotBlank</code></td>
+<td>验证注解的元素值不为空（不为null、trim()去除首位空格后长度为0）</td>
+<td><code>String</code></td>
+</tr>
+<tr>
+<td><code>@Pattern(value)</code></td>
+<td>限制必须符合指定的正则表达式</td>
+<td><code>同上</code></td>
+</tr>
+<tr>
+<td><code>@Email</code></td>
+<td>验证注解的元素值是Email，也可以通过正则表达式和flag指定自定义的email格式</td>
+<td><code>同上</code></td>
+</tr>
+<tr>
+<td><code>@NotEmpty</code></td>
+<td>验证注解的元素值不为null且不为空（字符串长度不为0、集合大小不为0）</td>
+<td><code>CharSequence、Collection、Map、Array</code></td>
+</tr>
+<tr>
+<td><code>@NotNull</code></td>
+<td>限制必须不为null</td>
+<td><code>所有类型</code></td>
+</tr>
+<tr>
+<td><code>@Null</code></td>
+<td>限制只能为null</td>
+<td><code>同上</code></td>
+</tr>
+</tbody></table>
+<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><ul>
+<li>嵌套校验<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="meta">@AllArgsConstructor</span></span><br><span class="line"><span class="meta">@NoArgsConstructor</span></span><br><span class="line"><span class="meta">@Builder</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Project</span> &#123;</span><br><span class="line"> </span><br><span class="line">    <span class="meta">@NotBlank(message = &quot;ID不能为空&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> String id;</span><br><span class="line"> </span><br><span class="line">    <span class="meta">@NotBlank</span></span><br><span class="line">    <span class="meta">@Pattern(regexp = &quot;[a-zA-Z0-9]&quot;, message = &quot;只允许输入数字和字母&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> String strValue;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@NotNull(message = &quot;不能为空&quot;)</span></span><br><span class="line">    <span class="meta">@Min(value = -99, message = &quot;值不能小于-99&quot;)</span></span><br><span class="line">    <span class="meta">@Max(value = 100, message = &quot;值不能超过100&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> Integer intValue;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@NotNull(message = &quot;不能为空&quot;)</span></span><br><span class="line">    <span class="meta">@Negative(message = &quot;值必须为负数&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> Integer negativeValue;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@NotNull(message = &quot;不能为空&quot;)</span></span><br><span class="line">    <span class="meta">@Valid</span><span class="comment">// todo 嵌套校验</span></span><br><span class="line">    <span class="keyword">private</span> Team team;</span><br><span class="line"> </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="meta">@AllArgsConstructor</span></span><br><span class="line"><span class="meta">@NoArgsConstructor</span></span><br><span class="line"><span class="meta">@Builder</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Team</span> &#123;</span><br><span class="line"> </span><br><span class="line">    <span class="meta">@FutureOrPresent(message = &quot;只能输入当前年份或未来的年份&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> Year nowYear;</span><br><span class="line"> </span><br><span class="line">    <span class="meta">@JsonFormat(timezone = &quot;GMT+8&quot;, pattern = &quot;yyyy-MM-dd HH:mm:ss&quot;)</span></span><br><span class="line">    <span class="meta">@Future(message = &quot;只能是未来的时间&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> Date futureTime;</span><br><span class="line"> </span><br><span class="line">    <span class="meta">@JsonFormat(timezone = &quot;GMT+8&quot;, pattern = &quot;yyyy-MM-dd HH:mm:ss&quot;)</span></span><br><span class="line">    <span class="meta">@Past(message = &quot;只能是过去的时间&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> Date pastTime;</span><br><span class="line"> </span><br><span class="line">    <span class="meta">@Email(message = &quot;请输入正确的邮箱&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> String email;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@NotNull(message = &quot;不能为空&quot;)</span></span><br><span class="line">    <span class="meta">@Valid</span><span class="comment">// todo 嵌套校验</span></span><br><span class="line">    <span class="keyword">private</span> List&lt;Member&gt; list;</span><br><span class="line"> </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="meta">@AllArgsConstructor</span></span><br><span class="line"><span class="meta">@NoArgsConstructor</span></span><br><span class="line"><span class="meta">@Builder</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Member</span> &#123;</span><br><span class="line"> </span><br><span class="line">    <span class="meta">@NotBlank(message = &quot;姓名不能为空&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line"> </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@RestController</span></span><br><span class="line"><span class="meta">@RequestMapping(&quot;/valid&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">TestValidController</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@PostMapping(&quot;/userInfo&quot;)</span></span><br><span class="line">    <span class="keyword">public</span> BaseResponse <span class="title function_">userInfo</span><span class="params">(<span class="meta">@Valid</span> <span class="meta">@RequestBody</span> Team team)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">BaseResponse</span>(team);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="Validated注解"><a href="#Validated注解" class="headerlink" title="@Validated注解"></a>@Validated注解</h2><ul>
+<li>由Spring提供（<code>Spring&#39;s JSR-303</code>规范）</li>
+<li>使用地方：<code>类</code>、<code>方法</code>、<code>方法参数</code></li>
+<li>功能：【支持分组验证】【能配合<code>@Valid</code>进行嵌套验证】</li>
+</ul>
+<h3 id="使用-1"><a href="#使用-1" class="headerlink" title="使用"></a>使用</h3><ul>
+<li><p>一、分组校验</p>
+<ul>
+<li>场景：保存草稿时某些字段不用校验，提交时都要校验，更新时id要校验不为空；</li>
+<li>1、自定义分组<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">MyValidGroup</span> &#123;</span><br><span class="line"> </span><br><span class="line">    <span class="comment">// 保存草稿</span></span><br><span class="line">    <span class="keyword">interface</span> <span class="title class_">SaveDraft</span> &#123; &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 提交表单</span></span><br><span class="line">    <span class="keyword">interface</span> <span class="title class_">Submit</span> &#123; &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="comment">// 更新数据</span></span><br><span class="line">    <span class="keyword">interface</span> <span class="title class_">Update</span> &#123; &#125;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>2、设置分组（不设置分组时属于<code>Default.class</code>默认分组）<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="meta">@AllArgsConstructor</span></span><br><span class="line"><span class="meta">@NoArgsConstructor</span></span><br><span class="line"><span class="meta">@Builder</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Project</span> &#123;</span><br><span class="line"> </span><br><span class="line">    <span class="meta">@NotBlank(message = &quot;ID不能为空&quot;, groups = &#123;MyValidGroup.Update.class&#125;)</span><span class="comment">// 更新时要校验id不为空</span></span><br><span class="line">    <span class="keyword">private</span> String id;</span><br><span class="line">    </span><br><span class="line">    <span class="meta">@NotBlank(message = &quot;项目老大不能为空&quot;, groups = &#123;MyValidGroup.SaveDraft.class,MyValidGroup.Submit.class,MyValidGroup.Update.class&#125;)</span></span><br><span class="line">    <span class="keyword">private</span> String leader;</span><br><span class="line"> </span><br><span class="line">    <span class="meta">@NotBlank(message = &quot;ID不能为空&quot;)</span></span><br><span class="line">    <span class="meta">@Pattern(regexp = &quot;[a-zA-Z0-9]&quot;, message = &quot;只允许输入数字和字母&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> String strValue;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@NotNull(message = &quot;不能为空&quot;)</span></span><br><span class="line">    <span class="meta">@Min(value = -99, message = &quot;值不能小于-99&quot;)</span></span><br><span class="line">    <span class="meta">@Max(value = 100, message = &quot;值不能超过100&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> Integer intValue;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@NotNull(message = &quot;不能为空&quot;)</span></span><br><span class="line">    <span class="meta">@Negative(message = &quot;值必须为负数&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> Integer negativeValue;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@NotNull(message = &quot;不能为空&quot;)</span></span><br><span class="line">    <span class="meta">@Valid</span><span class="comment">// todo 嵌套校验</span></span><br><span class="line">    <span class="keyword">private</span> Team team;</span><br><span class="line"> </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="meta">@AllArgsConstructor</span></span><br><span class="line"><span class="meta">@NoArgsConstructor</span></span><br><span class="line"><span class="meta">@Builder</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Team</span> &#123;</span><br><span class="line"> </span><br><span class="line">    <span class="meta">@FutureOrPresent(message = &quot;只能输入当前年份或未来的年份&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> Year nowYear;</span><br><span class="line"> </span><br><span class="line">    <span class="meta">@JsonFormat(timezone = &quot;GMT+8&quot;, pattern = &quot;yyyy-MM-dd HH:mm:ss&quot;)</span></span><br><span class="line">    <span class="meta">@Future(message = &quot;只能是未来的时间&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> Date futureTime;</span><br><span class="line"> </span><br><span class="line">    <span class="meta">@JsonFormat(timezone = &quot;GMT+8&quot;, pattern = &quot;yyyy-MM-dd HH:mm:ss&quot;)</span></span><br><span class="line">    <span class="meta">@Past(message = &quot;只能是过去的时间&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> Date pastTime;</span><br><span class="line"> </span><br><span class="line">    <span class="meta">@Email(message = &quot;请输入正确的邮箱&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> String email;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@NotNull(message = &quot;不能为空&quot;)</span></span><br><span class="line">    <span class="meta">@Valid</span><span class="comment">// todo 嵌套校验</span></span><br><span class="line">    <span class="keyword">private</span> List&lt;Member&gt; list;</span><br><span class="line"> </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="meta">@AllArgsConstructor</span></span><br><span class="line"><span class="meta">@NoArgsConstructor</span></span><br><span class="line"><span class="meta">@Builder</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Member</span> &#123;</span><br><span class="line"> </span><br><span class="line">    <span class="meta">@NotBlank(message = &quot;姓名不能为空&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line"> </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@RestController</span></span><br><span class="line"><span class="meta">@RequestMapping(&quot;/valid&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">TestValidController</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// todo Validated不配置时校验默认分组</span></span><br><span class="line">    <span class="meta">@PostMapping(&quot;/all&quot;)</span></span><br><span class="line">    <span class="keyword">public</span> BaseResponse <span class="title function_">all</span><span class="params">(<span class="meta">@Validated</span> <span class="meta">@RequestBody</span> ProjectDTO testAnnotationDto)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">BaseResponse</span>(testAnnotationDto);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// todo 保存草稿：校验草稿分组</span></span><br><span class="line">    <span class="meta">@PostMapping(&quot;/saveDraft&quot;)</span></span><br><span class="line">    <span class="keyword">public</span> BaseResponse <span class="title function_">saveDraft</span><span class="params">(<span class="meta">@Validated(value = &#123;TestValidGroup.SaveDraft.class&#125;)</span> <span class="meta">@RequestBody</span> ProjectDTO testAnnotationDto)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">BaseResponse</span>(testAnnotationDto);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// todo 提交：校验提交分组和默认分组</span></span><br><span class="line">    <span class="meta">@PostMapping(&quot;/submit&quot;)</span></span><br><span class="line">    <span class="keyword">public</span> BaseResponse <span class="title function_">submit</span><span class="params">(<span class="meta">@Validated(value = &#123;MyValidGroup.Submit.class, Default.class&#125;)</span> <span class="meta">@RequestBody</span> ProjectDTO testAnnotationDto)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">BaseResponse</span>(testAnnotationDto);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// todo 更新：校验更新分组和默认分组</span></span><br><span class="line">    <span class="meta">@PostMapping(&quot;/update&quot;)</span></span><br><span class="line">    <span class="keyword">public</span> BaseResponse <span class="title function_">update</span><span class="params">(<span class="meta">@Validated(value = &#123;MyValidGroup.Update.class, Default.class&#125;)</span> <span class="meta">@RequestBody</span> ProjectDTO testAnnotationDto)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">BaseResponse</span>(testAnnotationDto);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>二、分组校验指定顺序<code>@GroupSequence</code></p>
+<ul>
+<li>使用在<code>分组接口</code>上<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">MyValidGroup</span> &#123;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 先校验XXX分组，再校验YYY分组</span></span><br><span class="line">  <span class="meta">@GroupSequence(value = &#123;XXX.class, YYY.class&#125;)</span></span><br><span class="line">  <span class="keyword">interface</span> <span class="title class_">Update</span> &#123; &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">interface</span> <span class="title class_">XXX</span> &#123; &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">interface</span> <span class="title class_">YYY</span> &#123; &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="meta">@AllArgsConstructor</span></span><br><span class="line"><span class="meta">@NoArgsConstructor</span></span><br><span class="line"><span class="meta">@Builder</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Project</span> &#123;</span><br><span class="line">    <span class="meta">@NotBlank(message = &quot;ID不能为空&quot;, groups = &#123;MyValidGroup.XXX.class&#125;)</span><span class="comment">// 更新时要校验id不为空</span></span><br><span class="line">    <span class="keyword">private</span> String id;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@NotBlank(message = &quot;项目老大不能为空&quot;, groups = &#123;MyValidGroup.YYY.class&#125;)</span></span><br><span class="line">    <span class="keyword">private</span> String leader;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@RestController</span></span><br><span class="line"><span class="meta">@RequestMapping(&quot;/valid&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">TestValidController</span> &#123;</span><br><span class="line">  <span class="meta">@PostMapping(&quot;/post&quot;)</span></span><br><span class="line">  <span class="keyword">public</span> BaseResponse <span class="title function_">testValidPostRequest</span><span class="params">(<span class="meta">@Validated(value = &#123;MyValidGroup.Update.class&#125;)</span> <span class="meta">@RequestBody</span> ProjectDTO testAnnotationDto)</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">BaseResponse</span>(testAnnotationDto);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>三、快速失败机制（默认是校验所有参数，返回所有有问题的）</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ValidConfig</span> &#123;</span><br><span class="line"> </span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="keyword">public</span> Validator <span class="title function_">validator</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="type">ValidatorFactory</span> <span class="variable">validatorFactory</span> <span class="operator">=</span> Validation.byProvider(HibernateValidator.class).configure()</span><br><span class="line">                .failFast(<span class="literal">true</span>)<span class="comment">// todo 快速失败模式</span></span><br><span class="line">                .buildValidatorFactory();</span><br><span class="line">        <span class="keyword">return</span> validatorFactory.getValidator();</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>四、自定义校验注解（百度）</p>
+<ul>
+<li><code>@Constraint(validatedBy = XXXValidator.class)</code>：指定我们自定义的校验类</li>
+<li><code>public class XXXValidator implements ConstraintValidator&lt;XXX, String&gt; &#123;&#125;</code>：自定义校验类</li>
+</ul>
+</li>
+<li><p>五、全局异常处理，统一返回校验异常信息</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Slf4j</span></span><br><span class="line"><span class="meta">@RestControllerAdvice</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ExceptionHandlerConfig</span> &#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 拦截valid参数校验返回的异常，并转化成基本的返回样式</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@ExceptionHandler(value = MethodArgumentNotValidException.class)</span></span><br><span class="line">    <span class="keyword">public</span> Result <span class="title function_">dealMethodArgumentNotValidException</span><span class="params">(MethodArgumentNotValidException e)</span> &#123;</span><br><span class="line">        log.error(<span class="string">&quot;校验异常：&quot;</span>, e);</span><br><span class="line">        List&lt;ObjectError&gt; allErrors = e.getBindingResult().getAllErrors();</span><br><span class="line">        <span class="type">String</span> <span class="variable">message</span> <span class="operator">=</span> allErrors.stream()</span><br><span class="line">                .map(s -&gt; s.getDefaultMessage())</span><br><span class="line">                .collect(Collectors.joining(<span class="string">&quot;;&quot;</span>));</span><br><span class="line">        <span class="keyword">return</span> Result.builder().code(<span class="string">&quot;-10&quot;</span>).msg(message).build();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>六、不同分组下采用不同校验</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="meta">@AllArgsConstructor</span></span><br><span class="line"><span class="meta">@NoArgsConstructor</span></span><br><span class="line"><span class="meta">@SuperBuilder</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Base</span> &#123;</span><br><span class="line"> </span><br><span class="line">    <span class="meta">@NotBlank</span>.List(&#123;</span><br><span class="line">            <span class="meta">@NotBlank(message = &quot;Project不能为空&quot;, groups = &#123;MyValidGroup.Project.class&#125;)</span>,</span><br><span class="line">            <span class="meta">@NotBlank(message = &quot;Team不能为空&quot;, groups = &#123;MyValidGroup.Team.class&#125;)</span></span><br><span class="line">    &#125;)</span><br><span class="line">    <span class="keyword">private</span> String baseId;</span><br><span class="line"> </span><br><span class="line">    <span class="meta">@Max(value = 10, message = &quot;Project不能大于10&quot;, groups = &#123;MyValidGroup.Project.class&#125;)</span></span><br><span class="line">    <span class="meta">@Max(value = 30, message = &quot;Team不能大于30&quot;, groups = &#123;MyValidGroup.Team.class&#125;)</span></span><br><span class="line">    <span class="keyword">private</span> Integer number;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li></li>
+</ul>
+
+    </div>
+    
+    <div class="post-footer">
+        <div>
+            
+            转载声明：
+            商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="" target="_blank">JQH</a>
+            
+            
+        </div>
+        <div>
+            
+        </div>
+    </div>
+</article>
+<div class="article-nav prev-next-wrap clearfix">
+    
+    <a href="/2024/01/02/%E5%90%8E%E7%AB%AF/springboot/EnableAspectJAutoProxy/" class="pre-post btn btn-default" title='EnableAspectJAutoProxy'>
+        <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
+        <span class="hidden-xs">
+            EnableAspectJAutoProxy</span>
+    </a>
+    
+    
+    <a href="/2023/12/18/%E5%90%8E%E7%AB%AF/springboot/RestControllerAdvice/" class="next-post btn btn-default" title='RestControllerAdvice'>
+        <span class="hidden-lg">下一篇</span>
+        <span class="hidden-xs">
+            RestControllerAdvice</span><i class="fa fa-angle-right fa-fw"></i>
+    </a>
+    
+</div>
+
+<div id="comments">
+    
+<p>评论系统未开启，无法评论！</p>
+
+</div>
+
+                </main>
+                
+                    <aside id="article-toc" role="navigation" class="col-md-4">
+    <div class="widget">
+        <h3 class="title">
+            文章目录
+        </h3>
+        
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#SpringBoot%E5%8F%82%E6%95%B0%E6%A0%A1%E9%AA%8C"><span class="toc-text">SpringBoot参数校验</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Valid%E6%B3%A8%E8%A7%A3"><span class="toc-text">@Valid注解</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8"><span class="toc-text">使用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Validated%E6%B3%A8%E8%A7%A3"><span class="toc-text">@Validated注解</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8-1"><span class="toc-text">使用</span></a></li></ol></li></ol></li></ol>
+        
+    </div>
+</aside>
+                
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</footer>
+<a id="back-to-top" class="icon-btn hide">
+    <i class="fa fa-chevron-up"></i>
+</a>
+    <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="busuanzi">
+    
+</div>
+            </div>
+            <div class="col-sm-12">
+                <span>Copyright &copy;
+                    2017
+                    
+                </span> |
+                <span>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span> |
+                <span>
+                    Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<script src="/js/app.js?rev=@@hash.js"></script>
+
+</body>
+</html>
