@@ -23,9 +23,9 @@ https://cdn.pannellum.org/2.5/pannellum.htm
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css">
 ```
 - 全景图格式为`equirectangular`等距柱状投影，可以直接使用`pannellum.htm`访问打开
-  - `https://cdn.pannellum.org/2.5/pannellum.htm#panorama=https://pannellum.org/images/alma.jpg`
+  - https://cdn.pannellum.org/2.5/pannellum.htm#panorama=https://pannellum.org/images/alma.jpg
 - `pannellum.htm`访问打开也可以把配置写在json文件里面（`config`指定文件地址）
-  - `https://cdn.pannellum.org/2.5/pannellum.htm#config=https://pannellum.org/configs/compass.json`
+  - https://cdn.pannellum.org/2.5/pannellum.htm#config=https://pannellum.org/configs/compass.json
   - JSON配置选项
 ```json
 {
