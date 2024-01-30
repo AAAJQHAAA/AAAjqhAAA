@@ -5,6 +5,7 @@ category: 前端
 tags:
   - 全景图展示
   - Pannellum
+  - webgl
 ---
 # Pannellum实现全景图编辑&预览
 - 全景图片展示，需要支持热点
