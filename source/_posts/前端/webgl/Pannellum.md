@@ -120,4 +120,3 @@ https://cdn.pannellum.org/2.5/pannellum.htm
 - `touchstart`：在触摸开始时触发。TouchEvent传递给处理程序。
 - `touchend`：触摸结束时触发。TouchEvent传递给处理程序。
 
-## API
