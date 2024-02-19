@@ -77,7 +77,8 @@
 <div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
 <![endif]-->
 <body>
-    <header class="main-header"  style="background-image:url(
+    <!--
+<header class="main-header"  style="background-image:url(
     /./img/banner.jpg)"
      >
     <div class="main-header-box">
@@ -85,7 +86,9 @@
             <img src="/img/avatar.jpg" alt="logo头像" class="img-responsive center-block">
         </a>
         <div class="branding">
-            <!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+             -->
+<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>--><!--
+
             
             <h2>
                 从未有如此美妙的开局
@@ -93,8 +96,10 @@
             
         </div>
     </div>
-</header>
-    <nav class="main-navigation">
+</header> -->
+
+    <div class="content-div">
+        <nav class="main-navigation">
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
@@ -139,11 +144,11 @@
         </div>
     </div>
 </nav>
-    <section class="content-wrap">
-        <div class="container">
-            <div class="row">
-                <main class="col-md-8 main-content m-post">
-                    <p id="process"></p>
+        <section style="flex:1;overflow: auto;" class="content-wrap">
+            <div class="container">
+                <div class="row">
+                    <main class="col-md-8 main-content m-post">
+                        <p id="process"></p>
 <article class="post">
     <div class="post-head">
         <h1 id="全景图展示技术选型">
@@ -237,6 +242,14 @@
 <li>CND引入、npm引入</li>
 <li>有API文档<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>测试Photo Sphere Viewer<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/core/index.min.css&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">          <span class="selector-tag">html</span>,<span class="selector-tag">body</span>&#123;</span></span><br><span class="line"><span class="language-css">              <span class="attribute">padding</span>: <span class="number">0</span>;</span></span><br><span class="line"><span class="language-css">              <span class="attribute">margin</span>: <span class="number">0</span>;</span></span><br><span class="line"><span class="language-css">              <span class="attribute">width</span>:<span class="number">100%</span>;</span></span><br><span class="line"><span class="language-css">              <span class="attribute">height</span>:<span class="number">100%</span>;</span></span><br><span class="line"><span class="language-css">              <span class="attribute">overflow</span>: hidden;</span></span><br><span class="line"><span class="language-css">          &#125;</span></span><br><span class="line"><span class="language-css">          <span class="selector-id">#container</span> &#123;</span></span><br><span class="line"><span class="language-css">              <span class="attribute">width</span>:<span class="number">100%</span>;</span></span><br><span class="line"><span class="language-css">              <span class="attribute">height</span>:<span class="number">100%</span>;</span></span><br><span class="line"><span class="language-css">          &#125;</span></span><br><span class="line"><span class="language-css">      </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;container&quot;</span> <span class="attr">style</span>=<span class="string">&quot;width: 100vw; height: 100vh;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;importmap&quot;</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    &#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="string">&quot;imports&quot;</span>: &#123;</span></span><br><span class="line"><span class="language-javascript">            <span class="string">&quot;three&quot;</span>: <span class="string">&quot;https://cdn.jsdelivr.net/npm/three/build/three.module.js&quot;</span>,</span></span><br><span class="line"><span class="language-javascript">            <span class="string">&quot;@photo-sphere-viewer/core&quot;</span>: <span class="string">&quot;https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/core/index.module.js&quot;</span></span></span><br><span class="line"><span class="language-javascript">        &#125;</span></span><br><span class="line"><span class="language-javascript">    &#125;</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;module&quot;</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">import</span> &#123; <span class="title class_">Viewer</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;@photo-sphere-viewer/core&#x27;</span>;</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">const</span> viewer = <span class="keyword">new</span> <span class="title class_">Viewer</span>(&#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">container</span>: <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;#container&#x27;</span>),</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">panorama</span>: <span class="string">&#x27;../view.jpg&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">    &#125;);</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
 </ul>
+<h2 id="全景图概念"><a href="#全景图概念" class="headerlink" title="全景图概念"></a>全景图概念</h2><ul>
+<li>摄像机的视角和观察方向<ul>
+<li>Pitch（俯仰角）：俯仰角描述了摄像机的垂直旋转角度，即相对于地平线的角度。当俯仰角为0时，摄像机视线水平朝向前方；当俯仰角为正值时，摄像机视线向上偏离地平线；当俯仰角为负值时，摄像机向下偏离地平线。</li>
+<li>Yaw（偏航角）：偏航角描述了摄像机的水平旋转角度，即相对于参考方向（通常为正北方向）的角度。当偏航角为0时，摄像机视线指向参考方向；当偏航角为正值时，摄像机顺时针旋转；当偏航角为负值时，摄像机逆时针旋转。</li>
+<li>HFOV（水平视场角）：水平视场角描述了摄像机在水平方向上能够捕捉到的视野范围。它表示了从摄像机视线的左侧到右侧所能看到的角度范围。</li>
+</ul>
+</li>
+</ul>
 
     </div>
     
@@ -255,7 +268,7 @@
 </article>
 <div class="article-nav prev-next-wrap clearfix">
     
-    <a href="/2024/01/17/%E5%89%8D%E7%AB%AF/threejs/Pannellum/" class="pre-post btn btn-default" title='Pannellum实现全景图编辑&预览'>
+    <a href="/2024/01/17/%E5%89%8D%E7%AB%AF/webgl/Pannellum/" class="pre-post btn btn-default" title='Pannellum实现全景图编辑&预览'>
         <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
         <span class="hidden-xs">
             Pannellum实现全景图编辑&预览</span>
@@ -269,29 +282,32 @@
     </a>
     
 </div>
+<!--
 
 <div id="comments">
     
 <p>评论系统未开启，无法评论！</p>
 
 </div>
+ -->
 
-                </main>
-                
-                    <aside id="article-toc" role="navigation" class="col-md-4">
+                    </main>
+                    
+                        <aside id="article-toc" role="navigation" class="col-md-4">
     <div class="widget">
         <h3 class="title">
             文章目录
         </h3>
         
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%A8%E6%99%AF%E5%9B%BE%E5%B1%95%E7%A4%BA%E6%8A%80%E6%9C%AF%E9%80%89%E5%9E%8B"><span class="toc-text">全景图展示技术选型</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#three-js"><span class="toc-text">three.js</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Panolens%E3%80%90%E4%B8%8D%E6%8E%A8%E8%8D%90%E3%80%91"><span class="toc-text">Panolens【不推荐】</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Pannellum"><span class="toc-text">Pannellum</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Marzipano"><span class="toc-text">Marzipano</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#view360%E3%80%90%E4%B8%8D%E6%8E%A8%E8%8D%90%E3%80%91"><span class="toc-text">view360【不推荐】</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Photo-Sphere-Viewer"><span class="toc-text">Photo Sphere Viewer</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%A8%E6%99%AF%E5%9B%BE%E5%B1%95%E7%A4%BA%E6%8A%80%E6%9C%AF%E9%80%89%E5%9E%8B"><span class="toc-text">全景图展示技术选型</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#three-js"><span class="toc-text">three.js</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Panolens%E3%80%90%E4%B8%8D%E6%8E%A8%E8%8D%90%E3%80%91"><span class="toc-text">Panolens【不推荐】</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Pannellum"><span class="toc-text">Pannellum</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Marzipano"><span class="toc-text">Marzipano</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#view360%E3%80%90%E4%B8%8D%E6%8E%A8%E8%8D%90%E3%80%91"><span class="toc-text">view360【不推荐】</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Photo-Sphere-Viewer"><span class="toc-text">Photo Sphere Viewer</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%A8%E6%99%AF%E5%9B%BE%E6%A6%82%E5%BF%B5"><span class="toc-text">全景图概念</span></a></li></ol></li></ol>
         
     </div>
 </aside>
-                
+                    
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
     <footer class="main-footer">
     <div class="container">
         <div class="row">
@@ -301,9 +317,9 @@
 <a id="back-to-top" class="icon-btn hide">
     <i class="fa fa-chevron-up"></i>
 </a>
-    <div class="copyright">
-    <div class="container">
-        <div class="row">
+    <!-- <div class="copyright">
+     --><!-- <div class="container">
+         --><!--  --><!-- <div class="row">
             <div class="col-sm-12">
                 <div class="busuanzi">
     
@@ -321,14 +337,15 @@
                     Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
                 </span>
             </div>
-        </div>
-    </div>
-</div>
+        </div> --><!--  --><!--
+    </div> --><!--
+</div> -->
 
 
 
 
 <script src="/js/app.js?rev=@@hash.js"></script>
+
 
 </body>
 </html>

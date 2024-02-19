@@ -1,0 +1,293 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+<head>
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="JQH">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="theme-version" content="1.3.0">
+    <meta name="root" content="/">
+    <link rel="dns-prefetch" href="https://aaajqhaaa.github.io">
+    <!--SEO-->
+
+<meta name="keywords" content="canvas,canvas API" />
+
+
+<meta name="description" content="canvas APIHTMLCanvasElement12345678910111213141516171819202122/** 提供用于操作&lt;canvas&gt;元素的布局和表示的属性..." />
+
+
+<meta name="robots" content="all" />
+<meta name="google" content="all" />
+<meta name="googlebot" content="all" />
+<meta name="verify" content="all" />
+    <!--Title-->
+
+<title>
+    
+    canvasApi |
+    
+    JQH
+</title>
+
+<link rel="alternate" href="/atom.xml" title="JQH" type="application/atom+xml">
+
+
+<link rel="icon" href="/favicon.ico">
+
+    
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css?rev=3.3.7.css">
+<link rel="stylesheet" href="/css/font-awesome.min.css?rev=4.7.0.css">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash.css">
+
+    
+<div class="hide">
+    <script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan class='cnzz_stat_icon_1263868967 hide' %3E%3Cscript%20src%3D%22https%3A%2F%2Fs95.cnzz.com%2Fz_stat.php%3Fweb_id%3D1272564536%22%3E%3C%2Fscript%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1263868967%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+</div>
+
+
+
+
+    
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+<body>
+    <!--
+<header class="main-header"  style="background-image:url(
+    /./img/banner.jpg)"
+     >
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title='jqh'>
+            <img src="/img/avatar.jpg" alt="logo头像" class="img-responsive center-block">
+        </a>
+        <div class="branding">
+             -->
+<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>--><!--
+
+            
+            <h2>
+                从未有如此美妙的开局
+            </h2>
+            
+        </div>
+    </div>
+</header> -->
+
+    <div class="content-div">
+        <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed pull-right" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                        <span class="sr-only"></span>
+                        <i class="fa fa-bars"></i>
+                    </span>
+                    <a class="navbar-brand" href="https://aaajqhaaa.github.io">
+                        JQH</a>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/"><i class="fa "></i>
+                                首页</a>
+                        </li>
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/categories/前端/"><i class="fa "></i>
+                                前端</a>
+                        </li>
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/categories/后端/"><i class="fa "></i>
+                                后端</a>
+                        </li>
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/categories/其他/"><i class="fa "></i>
+                                其他</a>
+                        </li>
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/archives/"><i class="fa "></i>
+                                时间轴</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+        <section style="flex:1;overflow: auto;" class="content-wrap">
+            <div class="container">
+                <div class="row">
+                    <main class="col-md-8 main-content m-post">
+                        <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="canvasApi">
+            
+            canvasApi
+            
+        </h1>
+        <div class="post-meta">
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <a class="category-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+            <a class="tag-none-link" href="/tags/canvas/" rel="tag">canvas</a> <a class="tag-none-link" href="/tags/canvas-API/" rel="tag">canvas API</a>
+            
+        </span>
+    </span>
+    
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta">
+            2024/02/01</span>
+    </span>
+    
+    
+</div>
+        
+        
+    </div>
+    
+    <div class="post-body post-content">
+        <h1 id="canvas-API"><a href="#canvas-API" class="headerlink" title="canvas API"></a>canvas API</h1><h2 id="HTMLCanvasElement"><a href="#HTMLCanvasElement" class="headerlink" title="HTMLCanvasElement"></a>HTMLCanvasElement</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/** 提供用于操作&lt;canvas&gt;元素的布局和表示的属性和方法。HTMLCanvasElement接口也继承了HTMLElement接口的属性和方法。 */</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">HTMLCanvasElement</span> <span class="keyword">extends</span> <span class="title class_ inherited__">HTMLElement</span> &#123;</span><br><span class="line">    <span class="attr">height</span>: number;<span class="comment">// 画布元素的高度。</span></span><br><span class="line">    <span class="attr">width</span>: number;<span class="comment">// 画布元素的宽度。</span></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 返回一个对象，该对象提供用于在文档中的画布元素上绘制和操作图像和图形的方法和属性。上下文对象包括有关颜色、线宽、字体和其他可以在画布上绘制的图形参数的信息。</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> contextId 要创建的画布类型的标识符(ID)。IE 9和IE 10只支持2d上下文;IE11支持使用canvas.getContext(&quot;experimental-webgl&quot;)的3d或WebGL上下文;</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="title function_">getContext</span>(<span class="attr">contextId</span>: <span class="string">&quot;2d&quot;</span>, options?: <span class="title class_">CanvasRenderingContext2DSettings</span>): <span class="title class_">CanvasRenderingContext2D</span> | <span class="literal">null</span>;</span><br><span class="line">    <span class="title function_">getContext</span>(<span class="attr">contextId</span>: <span class="string">&quot;bitmaprenderer&quot;</span>, options?: <span class="title class_">ImageBitmapRenderingContextSettings</span>): <span class="title class_">ImageBitmapRenderingContext</span> | <span class="literal">null</span>;</span><br><span class="line">    <span class="title function_">getContext</span>(<span class="attr">contextId</span>: <span class="string">&quot;webgl&quot;</span>, options?: <span class="title class_">WebGLContextAttributes</span>): <span class="title class_">WebGLRenderingContext</span> | <span class="literal">null</span>;</span><br><span class="line">    <span class="title function_">getContext</span>(<span class="attr">contextId</span>: <span class="string">&quot;webgl2&quot;</span>, options?: <span class="title class_">WebGLContextAttributes</span>): <span class="title class_">WebGL2RenderingContext</span> | <span class="literal">null</span>;</span><br><span class="line">    <span class="title function_">getContext</span>(<span class="attr">contextId</span>: string, options?: any): <span class="title class_">RenderingContext</span> | <span class="literal">null</span>;</span><br><span class="line">    <span class="comment">// 画布中包含的图像</span></span><br><span class="line">    <span class="title function_">toBlob</span>(<span class="attr">callback</span>: <span class="title class_">BlobCallback</span>, type?: string, quality?: any): <span class="keyword">void</span>;</span><br><span class="line">    <span class="comment">// 将当前画布的内容作为图像返回，您可以将该图像用作另一个画布或HTML元素的源。</span></span><br><span class="line">    <span class="title function_">toDataURL</span>(type?: string, quality?: any): string;</span><br><span class="line">    <span class="comment">// 对画布内容的实时视频捕获</span></span><br><span class="line">    <span class="title function_">captureStream</span>(frameRate?: number): <span class="title class_">CanvasCaptureMediaStream</span>;</span><br><span class="line">    <span class="comment">// 将控制权转移到主线程或工作线程上</span></span><br><span class="line">    <span class="title function_">transferControlToOffscreen</span>(): <span class="title class_">OffscreenCanvas</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="CanvasRenderingContext2D"><a href="#CanvasRenderingContext2D" class="headerlink" title="CanvasRenderingContext2D"></a>CanvasRenderingContext2D</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">CanvasRenderingContext2D</span> &#123;</span><br><span class="line">  <span class="attr">canvas</span>: <span class="title class_">HTMLCanvasElement</span>;<span class="comment">// canvas只读引用</span></span><br><span class="line">  <span class="attr">width</span>: number;<span class="comment">// 画布元素的高度。</span></span><br><span class="line">  <span class="attr">height</span>: number;<span class="comment">// 画布元素的宽度。</span></span><br><span class="line">  <span class="comment">// 对于没有直接固定到特定画布的上下文</span></span><br><span class="line">  <span class="title function_">commit</span>(): <span class="keyword">void</span>;</span><br><span class="line">  </span><br><span class="line">  <span class="comment">// 状态</span></span><br><span class="line">  <span class="comment">// 保存 当前状态 到堆栈上</span></span><br><span class="line">  <span class="title function_">save</span>(): <span class="keyword">void</span>;</span><br><span class="line">  <span class="comment">// 弹出 图形状态堆栈中的 顶部条目</span></span><br><span class="line">  <span class="title function_">restore</span>(): <span class="keyword">void</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 转换</span></span><br><span class="line">  <span class="attr">currentTransform</span>: <span class="title class_">SVGMatrix</span>;<span class="comment">// 当前的变换</span></span><br><span class="line">  <span class="comment">// （坐标系）缩放 水平或垂直</span></span><br><span class="line">  <span class="title function_">scale</span>(<span class="attr">x</span>: number, <span class="attr">y</span>: number): <span class="keyword">void</span>;</span><br><span class="line">  <span class="comment">// （坐标系）旋转（弧度 = 角度 * Math.PI / 180）</span></span><br><span class="line">  <span class="title function_">rotate</span>(<span class="attr">angle</span>: number): <span class="keyword">void</span>;</span><br><span class="line">  <span class="comment">// （坐标系）移动</span></span><br><span class="line">  <span class="title function_">translate</span>(<span class="attr">x</span>: number, <span class="attr">y</span>: number): <span class="keyword">void</span>;</span><br><span class="line">  <span class="comment">// （坐标系）矩阵变换：缩放(a,d)、旋转(b,c)、平移(e,f)（相对变换矩阵，在当前基础上变换）</span></span><br><span class="line">  <span class="title function_">transform</span>(<span class="attr">a</span>: number, <span class="attr">b</span>: number, <span class="attr">c</span>: number, <span class="attr">d</span>: number, <span class="attr">e</span>: number, <span class="attr">f</span>: number): <span class="keyword">void</span>;</span><br><span class="line">  <span class="comment">// （坐标系）矩阵变换：缩放(a,d)、旋转(b,c)、平移(e,f)（绝对变换矩阵，取消当前变换设置成新的变换）</span></span><br><span class="line">  <span class="title function_">setTransform</span>(<span class="attr">a</span>: number, <span class="attr">b</span>: number, <span class="attr">c</span>: number, <span class="attr">d</span>: number, <span class="attr">e</span>: number, <span class="attr">f</span>: number): <span class="keyword">void</span>;</span><br><span class="line">  <span class="comment">// 重新设置</span></span><br><span class="line">  <span class="title function_">resetTransform</span>(): <span class="keyword">void</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 合成</span></span><br><span class="line">  <span class="attr">globalAlpha</span>: number;<span class="comment">// 设置图形和图片透明度(0.0-1.0)</span></span><br><span class="line">  <span class="attr">globalCompositeOperation</span>: string;<span class="comment">// 设置绘制新形状时应用的合成操作的类型</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">// 图像的平滑</span></span><br><span class="line">  <span class="attr">imageSmoothingEnabled</span>: boolean;<span class="comment">// 设置图片是否平滑</span></span><br><span class="line">  <span class="attr">imageSmoothingQuality</span>: <span class="string">&#x27;low&#x27;</span> | <span class="string">&#x27;medium&#x27;</span> | <span class="string">&#x27;high&#x27;</span>;<span class="comment">// 设置图像平滑度的属性</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">// 过滤器</span></span><br><span class="line">  <span class="attr">filter</span>: string;<span class="comment">// 提供模糊、灰度等过滤效果的属性</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">// 颜色和款式</span></span><br><span class="line">  <span class="attr">strokeStyle</span>: string | <span class="title class_">CanvasGradient</span> | <span class="title class_">CanvasPattern</span>;<span class="comment">// 设置上下文颜色(描边)</span></span><br><span class="line">  <span class="attr">fillStyle</span>: string | <span class="title class_">CanvasGradient</span> | <span class="title class_">CanvasPattern</span>;<span class="comment">// 设置上下文颜色(填充)</span></span><br><span class="line">  <span class="comment">// 两点之间构建线性渐变，返回值赋值给 fillStyle 或者 strokeStyle</span></span><br><span class="line">  <span class="title function_">createLinearGradient</span>(<span class="attr">x0</span>: number, <span class="attr">y0</span>: number, <span class="attr">x1</span>: number, <span class="attr">y1</span>: number): <span class="title class_">CanvasGradient</span>;</span><br><span class="line">  <span class="comment">// 两圆之间构建放射性渐变</span></span><br><span class="line">  <span class="title function_">createRadialGradient</span>(<span class="attr">x0</span>: number, <span class="attr">y0</span>: number, <span class="attr">r0</span>: number, <span class="attr">x1</span>: number, <span class="attr">y1</span>: number, <span class="attr">r1</span>: number): <span class="title class_">CanvasGradient</span>;</span><br><span class="line">  <span class="comment">// 图像背景（填充），返回值赋值给 fillStyle</span></span><br><span class="line">  <span class="title function_">createPattern</span>(<span class="attr">image</span>: <span class="title class_">CanvasImageSource</span>, <span class="attr">repetition</span>: ?string): <span class="title class_">CanvasPattern</span>;</span><br><span class="line">  <span class="comment">// 指定点周围创建渐变（开始弧度，坐标x，坐标y）</span></span><br><span class="line">  <span class="title function_">createConicGradient</span>(startAngle, x, y): <span class="title class_">CanvasGradient</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  <span class="comment">// 阴影</span></span><br><span class="line">  <span class="attr">shadowOffsetX</span>: number;<span class="comment">// 阴影水平偏移距离</span></span><br><span class="line">  <span class="attr">shadowOffsetY</span>: number;<span class="comment">// 阴影垂直偏移距离</span></span><br><span class="line">  <span class="attr">shadowBlur</span>: number;<span class="comment">// 模糊效果程度</span></span><br><span class="line">  <span class="attr">shadowColor</span>: string;<span class="comment">// 阴影颜色</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">// 矩形</span></span><br><span class="line">  <span class="comment">// 清除区域(x坐标，y坐标，宽，高)【透明】</span></span><br><span class="line">  <span class="title function_">clearRect</span>(<span class="attr">x</span>: number, <span class="attr">y</span>: number, <span class="attr">w</span>: number, <span class="attr">h</span>: number): <span class="keyword">void</span>;</span><br><span class="line">  <span class="comment">// 绘制填充矩形(x坐标，y坐标，宽，高)</span></span><br><span class="line">  <span class="title function_">fillRect</span>(<span class="attr">x</span>: number, <span class="attr">y</span>: number, <span class="attr">w</span>: number, <span class="attr">h</span>: number): <span class="keyword">void</span>;</span><br><span class="line">  <span class="comment">// 绘制描边矩形(x坐标，y坐标，宽，高)</span></span><br><span class="line">  <span class="title function_">strokeRect</span>(<span class="attr">x</span>: number, <span class="attr">y</span>: number, <span class="attr">w</span>: number, <span class="attr">h</span>: number): <span class="keyword">void</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 路径API</span></span><br><span class="line">  <span class="comment">// 清空之前子路径，开始新的路径绘制</span></span><br><span class="line">  <span class="title function_">beginPath</span>(): <span class="keyword">void</span>;</span><br><span class="line">  <span class="comment">// （填充）根据当前的填充样式，填充当前或已存在的路径。采取非零环绕或者奇偶环绕规则</span></span><br><span class="line">  <span class="title function_">fill</span>(fillRule?: <span class="title class_">CanvasFillRule</span>): <span class="keyword">void</span>;</span><br><span class="line">  <span class="title function_">fill</span>(<span class="attr">path</span>: <span class="title class_">Path2D</span>, fillRule?: <span class="title class_">CanvasFillRule</span>): <span class="keyword">void</span>;</span><br><span class="line">  <span class="comment">// （描边）使用非零环绕规则，根据当前的画线样式，绘制当前或已经存在的路径</span></span><br><span class="line">  <span class="title function_">stroke</span>(): <span class="keyword">void</span>;</span><br><span class="line">  <span class="title function_">stroke</span>(<span class="attr">path</span>: <span class="title class_">Path2D</span>): <span class="keyword">void</span>;</span><br><span class="line">  <span class="comment">// 用来给当前路径或特定路径绘制焦点的方法，如果给定的元素获取了焦点。</span></span><br><span class="line">  <span class="title function_">drawFocusIfNeeded</span>(<span class="attr">element</span>: <span class="title class_">Element</span>): <span class="keyword">void</span>;</span><br><span class="line">  <span class="title function_">drawFocusIfNeeded</span>(<span class="attr">path</span>: <span class="title class_">Path2D</span>, <span class="attr">element</span>: <span class="title class_">Element</span>): <span class="keyword">void</span>;</span><br><span class="line">  <span class="comment">// 将当前或给定的路径滚动到窗口的方法</span></span><br><span class="line">  <span class="title function_">scrollPathIntoView</span>(): <span class="keyword">void</span>;</span><br><span class="line">  <span class="title function_">scrollPathIntoView</span>(<span class="attr">path</span>: <span class="title class_">Path2D</span>): <span class="keyword">void</span>;</span><br><span class="line">  <span class="comment">// 路径裁剪（裁剪出有效区域，浏览器会将后面所有的绘图操作都限制在本区域内执行）</span></span><br><span class="line">  <span class="title function_">clip</span>(fillRule?: <span class="title class_">CanvasFillRule</span>): <span class="keyword">void</span>;</span><br><span class="line">  <span class="title function_">clip</span>(<span class="attr">path</span>: <span class="title class_">Path2D</span>, fillRule?: <span class="title class_">CanvasFillRule</span>): <span class="keyword">void</span>;</span><br><span class="line">  <span class="title function_">resetClip</span>(): <span class="keyword">void</span>;</span><br><span class="line">  <span class="comment">// 用于判断在当前路径中是否包含检测点的方法</span></span><br><span class="line">  <span class="title function_">isPointInPath</span>(<span class="attr">x</span>: number, <span class="attr">y</span>: number, fillRule?: <span class="title class_">CanvasFillRule</span>): boolean;</span><br><span class="line">  <span class="title function_">isPointInPath</span>(<span class="attr">path</span>: <span class="title class_">Path2D</span>, <span class="attr">x</span>: number, <span class="attr">y</span>: number, fillRule?: <span class="title class_">CanvasFillRule</span>): boolean;</span><br><span class="line">  <span class="comment">// 用于检测某点是否在路径的描边线上的方法</span></span><br><span class="line">  <span class="title function_">isPointInStroke</span>(<span class="attr">x</span>: number, <span class="attr">y</span>: number): boolean;</span><br><span class="line">  <span class="title function_">isPointInStroke</span>(<span class="attr">path</span>: <span class="title class_">Path2D</span>, <span class="attr">x</span>: number, <span class="attr">y</span>: number): boolean;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 文本(参见CanvasDrawingStyles接口)</span></span><br><span class="line">  <span class="comment">// （填充）在指定的坐标上绘制文本</span></span><br><span class="line">  <span class="title function_">fillText</span>(<span class="attr">text</span>: string, <span class="attr">x</span>: number, <span class="attr">y</span>: number, maxWidth?: number): <span class="keyword">void</span>;</span><br><span class="line">  <span class="comment">// （描边）在给定的 (x, y) 位置绘制文本</span></span><br><span class="line">  <span class="title function_">strokeText</span>(<span class="attr">text</span>: string, <span class="attr">x</span>: number, <span class="attr">y</span>: number, maxWidth?: number): <span class="keyword">void</span>;</span><br><span class="line">  <span class="comment">// 被测量文本信息</span></span><br><span class="line">  <span class="title function_">measureText</span>(<span class="attr">text</span>: string): <span class="title class_">TextMetrics</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 画图片</span></span><br><span class="line">  <span class="comment">// 绘图+移动</span></span><br><span class="line">  <span class="title function_">drawImage</span>(<span class="attr">image</span>: <span class="title class_">CanvasImageSource</span>, <span class="attr">dx</span>: number, <span class="attr">dy</span>: number): <span class="keyword">void</span>;</span><br><span class="line">  <span class="comment">// 绘图+移动+缩放（dx,dy,dw,dh视图）</span></span><br><span class="line">  <span class="title function_">drawImage</span>(<span class="attr">image</span>: <span class="title class_">CanvasImageSource</span>, <span class="attr">dx</span>: number, <span class="attr">dy</span>: number, <span class="attr">dw</span>: number, <span class="attr">dh</span>: number): <span class="keyword">void</span>;</span><br><span class="line">  <span class="comment">// 绘图+裁剪+移动+缩放（sx,sy,sw,sh相机视口、dx,dy,dw,dh视图）</span></span><br><span class="line">  <span class="title function_">drawImage</span>(<span class="attr">image</span>: <span class="title class_">CanvasImageSource</span>, <span class="attr">sx</span>: number, <span class="attr">sy</span>: number, <span class="attr">sw</span>: number, <span class="attr">sh</span>: number, <span class="attr">dx</span>: number, <span class="attr">dy</span>: number, <span class="attr">dw</span>: number, <span class="attr">dh</span>: number): <span class="keyword">void</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 点击区域</span></span><br><span class="line">  <span class="title function_">addHitRegion</span>(options?: <span class="title class_">HitRegionOptions</span>): <span class="keyword">void</span>;</span><br><span class="line">  <span class="title function_">removeHitRegion</span>(<span class="attr">id</span>: string): <span class="keyword">void</span>;</span><br><span class="line">  <span class="title function_">clearHitRegions</span>(): <span class="keyword">void</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 像素操作</span></span><br><span class="line">  <span class="comment">// 创建一个新的、空白的、指定大小的 ImageData 对象。所有的像素在新对象中都是透明的</span></span><br><span class="line">  <span class="title function_">createImageData</span>(<span class="attr">sw</span>: number, <span class="attr">sh</span>: number): <span class="title class_">ImageData</span>;</span><br><span class="line">  <span class="title function_">createImageData</span>(<span class="attr">imagedata</span>: <span class="title class_">ImageData</span>): <span class="title class_">ImageData</span>;</span><br><span class="line">  <span class="comment">// 获取描述 canvas 区域隐含的像素数据</span></span><br><span class="line">  <span class="title function_">getImageData</span>(<span class="attr">sx</span>: number, <span class="attr">sy</span>: number, <span class="attr">sw</span>: number, <span class="attr">sh</span>: number): <span class="title class_">ImageData</span>;</span><br><span class="line">  <span class="title function_">putImageData</span>(<span class="attr">imagedata</span>: <span class="title class_">ImageData</span>, <span class="attr">dx</span>: number, <span class="attr">dy</span>: number): <span class="keyword">void</span>;</span><br><span class="line">  <span class="title function_">putImageData</span>(<span class="attr">imagedata</span>: <span class="title class_">ImageData</span>, <span class="attr">dx</span>: number, <span class="attr">dy</span>: number, <span class="attr">dirtyX</span>: number, <span class="attr">dirtyY</span>: number, <span class="attr">dirtyWidth</span>: number, <span class="attr">dirtyHeight</span>: number): <span class="keyword">void</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 画布绘画风格</span></span><br><span class="line">  <span class="attr">lineWidth</span>: number;<span class="comment">// 设置线段厚度（描边）</span></span><br><span class="line">  <span class="attr">lineCap</span>: string;<span class="comment">// 线段端点样式（描边）</span></span><br><span class="line">  <span class="attr">lineJoin</span>: string;<span class="comment">// 线段拐角样式（描边）</span></span><br><span class="line">  <span class="attr">miterLimit</span>: number;<span class="comment">// 拐角最大厚度（描边）</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">// 虚线</span></span><br><span class="line">  <span class="comment">// 描边设置为虚线（[实、虚、实、虚....]）</span></span><br><span class="line">  <span class="title function_">setLineDash</span>(<span class="attr">segments</span>: <span class="title class_">Array</span>&lt;number&gt;): <span class="keyword">void</span>;</span><br><span class="line">  <span class="comment">// 获取当前线段样式的方法</span></span><br><span class="line">  <span class="title function_">getLineDash</span>(): <span class="title class_">Array</span>&lt;number&gt;;</span><br><span class="line">  <span class="attr">lineDashOffset</span>: number;<span class="comment">// 设置虚线偏移量（前面）</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">// 文本</span></span><br><span class="line">  <span class="attr">font</span>: string;<span class="comment">// 当前字体样式</span></span><br><span class="line">  <span class="attr">textAlign</span>: string;<span class="comment">// 文本的对齐方式</span></span><br><span class="line">  <span class="attr">textBaseline</span>: string;<span class="comment">// 当前文本基线</span></span><br><span class="line">  <span class="attr">direction</span>: string;<span class="comment">// 当前文本方向</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">// 路径方法</span></span><br><span class="line">  <span class="comment">// 共享路径API方法</span></span><br><span class="line">  <span class="comment">// 将笔点连到当前子路径起始点的方法</span></span><br><span class="line">  <span class="title function_">closePath</span>(): <span class="keyword">void</span>;</span><br><span class="line">  <span class="comment">// 将一个新的子路径的起始点移动到 (x，y) 坐标</span></span><br><span class="line">  <span class="title function_">moveTo</span>(<span class="attr">x</span>: number, <span class="attr">y</span>: number): <span class="keyword">void</span>;</span><br><span class="line">  <span class="comment">// 使用直线连接子路径的终点到 x，y 坐标</span></span><br><span class="line">  <span class="title function_">lineTo</span>(<span class="attr">x</span>: number, <span class="attr">y</span>: number): <span class="keyword">void</span>;</span><br><span class="line">  <span class="comment">// 新增二次贝塞尔曲线路径（控制点x,控制点y,端点x,端点y）</span></span><br><span class="line">  <span class="title function_">quadraticCurveTo</span>(<span class="attr">cpx</span>: number, <span class="attr">cpy</span>: number, <span class="attr">x</span>: number, <span class="attr">y</span>: number): <span class="keyword">void</span>;</span><br><span class="line">  <span class="comment">// 绘制三次贝赛尔曲线路径（控制点x,控制点y,控制点x2,控制点y2,端点x,端点y）</span></span><br><span class="line">  <span class="title function_">bezierCurveTo</span>(<span class="attr">cp1x</span>: number, <span class="attr">cp1y</span>: number, <span class="attr">cp2x</span>: number, <span class="attr">cp2y</span>: number, <span class="attr">x</span>: number, <span class="attr">y</span>: number): <span class="keyword">void</span>;</span><br><span class="line">  <span class="comment">// 根据控制点和半径绘制圆弧路径，使用当前的描点 (前一个 moveTo 或 lineTo 等函数的止点)（控制点x,控制点y,控制点x2,控制点y2,弧度）</span></span><br><span class="line">  <span class="title function_">arcTo</span>(<span class="attr">x1</span>: number, <span class="attr">y1</span>: number, <span class="attr">x2</span>: number, <span class="attr">y2</span>: number, <span class="attr">radius</span>: number): <span class="keyword">void</span>;</span><br><span class="line">  <span class="title function_">arcTo</span>(<span class="attr">x1</span>: number, <span class="attr">y1</span>: number, <span class="attr">x2</span>: number, <span class="attr">y2</span>: number, <span class="attr">radiusX</span>: number, <span class="attr">radiusY</span>: number, <span class="attr">rotation</span>: number): <span class="keyword">void</span>;</span><br><span class="line">  <span class="comment">// 创建矩形路径的方法，矩形的起点位置是 (x, y)，尺寸为 width 和 height。矩形的 4 个点通过直线连接，子路径做为闭合的标记，所以你可以填充或者描边矩形</span></span><br><span class="line">  <span class="title function_">rect</span>(<span class="attr">x</span>: number, <span class="attr">y</span>: number, <span class="attr">w</span>: number, <span class="attr">h</span>: number): <span class="keyword">void</span>;</span><br><span class="line">  <span class="comment">// 绘制圆弧路径(x,y,半径,开始弧度,结束弧度,是否逆时针方向)</span></span><br><span class="line">  <span class="title function_">arc</span>(<span class="attr">x</span>: number, <span class="attr">y</span>: number, <span class="attr">radius</span>: number, <span class="attr">startAngle</span>: number, <span class="attr">endAngle</span>: number, anticlockwise?: boolean): <span class="keyword">void</span>;</span><br><span class="line">  <span class="comment">// 添加椭圆路径的方法</span></span><br><span class="line">  <span class="title function_">ellipse</span>(<span class="attr">x</span>: number, <span class="attr">y</span>: number, <span class="attr">radiusX</span>: number, <span class="attr">radiusY</span>: number, <span class="attr">rotation</span>: number, <span class="attr">startAngle</span>: number, <span class="attr">endAngle</span>: number, anticlockwise?: boolean): <span class="keyword">void</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Path2D-CanvasPath"><a href="#Path2D-CanvasPath" class="headerlink" title="Path2D CanvasPath"></a>Path2D CanvasPath</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">interface <span class="title class_">CanvasPath</span> &#123;</span><br><span class="line">    <span class="title function_">arc</span>(<span class="attr">x</span>: number, <span class="attr">y</span>: number, <span class="attr">radius</span>: number, <span class="attr">startAngle</span>: number, <span class="attr">endAngle</span>: number, anticlockwise?: boolean): <span class="keyword">void</span>;</span><br><span class="line">    <span class="title function_">arcTo</span>(<span class="attr">x1</span>: number, <span class="attr">y1</span>: number, <span class="attr">x2</span>: number, <span class="attr">y2</span>: number, <span class="attr">radius</span>: number): <span class="keyword">void</span>;</span><br><span class="line">    <span class="title function_">bezierCurveTo</span>(<span class="attr">cp1x</span>: number, <span class="attr">cp1y</span>: number, <span class="attr">cp2x</span>: number, <span class="attr">cp2y</span>: number, <span class="attr">x</span>: number, <span class="attr">y</span>: number): <span class="keyword">void</span>;</span><br><span class="line">    <span class="title function_">closePath</span>(): <span class="keyword">void</span>;</span><br><span class="line">    <span class="title function_">ellipse</span>(<span class="attr">x</span>: number, <span class="attr">y</span>: number, <span class="attr">radiusX</span>: number, <span class="attr">radiusY</span>: number, <span class="attr">rotation</span>: number, <span class="attr">startAngle</span>: number, <span class="attr">endAngle</span>: number, anticlockwise?: boolean): <span class="keyword">void</span>;</span><br><span class="line">    <span class="title function_">lineTo</span>(<span class="attr">x</span>: number, <span class="attr">y</span>: number): <span class="keyword">void</span>;</span><br><span class="line">    <span class="title function_">moveTo</span>(<span class="attr">x</span>: number, <span class="attr">y</span>: number): <span class="keyword">void</span>;</span><br><span class="line">    <span class="title function_">quadraticCurveTo</span>(<span class="attr">cpx</span>: number, <span class="attr">cpy</span>: number, <span class="attr">x</span>: number, <span class="attr">y</span>: number): <span class="keyword">void</span>;</span><br><span class="line">    <span class="title function_">rect</span>(<span class="attr">x</span>: number, <span class="attr">y</span>: number, <span class="attr">w</span>: number, <span class="attr">h</span>: number): <span class="keyword">void</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">interface <span class="title class_">Path2D</span> <span class="keyword">extends</span> <span class="title class_">CanvasPath</span> &#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Adds to the path the path given by the argument.</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="title function_">addPath</span>(<span class="attr">path</span>: <span class="title class_">Path2D</span>, transform?: <span class="title class_">DOMMatrix2DInit</span>): <span class="keyword">void</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="ImageBitmapRenderingContext"><a href="#ImageBitmapRenderingContext" class="headerlink" title="ImageBitmapRenderingContext"></a>ImageBitmapRenderingContext</h2><h2 id="WebGLRenderingContext"><a href="#WebGLRenderingContext" class="headerlink" title="WebGLRenderingContext"></a>WebGLRenderingContext</h2><h2 id="WebGL2RenderingContext"><a href="#WebGL2RenderingContext" class="headerlink" title="WebGL2RenderingContext"></a>WebGL2RenderingContext</h2>
+    </div>
+    
+    <div class="post-footer">
+        <div>
+            
+            转载声明：
+            商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="" target="_blank">JQH</a>
+            
+            
+        </div>
+        <div>
+            
+        </div>
+    </div>
+</article>
+<div class="article-nav prev-next-wrap clearfix">
+    
+    <a href="/2024/02/04/%E5%89%8D%E7%AB%AF/vue/element/" class="pre-post btn btn-default" title='vue脚手架element-ui按需引入'>
+        <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
+        <span class="hidden-xs">
+            vue脚手架element-ui按需引入</span>
+    </a>
+    
+    
+    <a href="/2024/01/31/%E5%89%8D%E7%AB%AF/canvas/canvas/" class="next-post btn btn-default" title='canvas'>
+        <span class="hidden-lg">下一篇</span>
+        <span class="hidden-xs">
+            canvas</span><i class="fa fa-angle-right fa-fw"></i>
+    </a>
+    
+</div>
+<!--
+
+<div id="comments">
+    
+<p>评论系统未开启，无法评论！</p>
+
+</div>
+ -->
+
+                    </main>
+                    
+                        <aside id="article-toc" role="navigation" class="col-md-4">
+    <div class="widget">
+        <h3 class="title">
+            文章目录
+        </h3>
+        
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#canvas-API"><span class="toc-text">canvas API</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#HTMLCanvasElement"><span class="toc-text">HTMLCanvasElement</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CanvasRenderingContext2D"><span class="toc-text">CanvasRenderingContext2D</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Path2D-CanvasPath"><span class="toc-text">Path2D CanvasPath</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ImageBitmapRenderingContext"><span class="toc-text">ImageBitmapRenderingContext</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#WebGLRenderingContext"><span class="toc-text">WebGLRenderingContext</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#WebGL2RenderingContext"><span class="toc-text">WebGL2RenderingContext</span></a></li></ol></li></ol>
+        
+    </div>
+</aside>
+                    
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</footer>
+<a id="back-to-top" class="icon-btn hide">
+    <i class="fa fa-chevron-up"></i>
+</a>
+    <!-- <div class="copyright">
+     --><!-- <div class="container">
+         --><!--  --><!-- <div class="row">
+            <div class="col-sm-12">
+                <div class="busuanzi">
+    
+</div>
+            </div>
+            <div class="col-sm-12">
+                <span>Copyright &copy;
+                    2017
+                    
+                </span> |
+                <span>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span> |
+                <span>
+                    Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span>
+            </div>
+        </div> --><!--  --><!--
+    </div> --><!--
+</div> -->
+
+
+
+
+<script src="/js/app.js?rev=@@hash.js"></script>
+
+
+</body>
+</html>
