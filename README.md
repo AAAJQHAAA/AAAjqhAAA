@@ -6,7 +6,10 @@
 - 部署：`npm run deploy`
 
 java系统：
+前后端国际化
+SpringBoot参数校验
 代码多类型数据源适配
+系统日志
 用户-角色-功能权限-数据权限
 前后端功能权限
 数据权限隔离
@@ -15,6 +18,8 @@ java系统：
 待办/已办功能表设计（其他系统对接跳转）
 
 前端：
+vue3
+前端代码编辑器实现
 canvas API
 webrtc API
 Audio API
