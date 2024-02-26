@@ -5,9 +5,11 @@ category: 前端
 tags:
   - canvas 
   - canvas API
+  - canvas基础
 ---
 # canvas API
 ## HTMLCanvasElement
+
 ```js
 /** 提供用于操作<canvas>元素的布局和表示的属性和方法。HTMLCanvasElement接口也继承了HTMLElement接口的属性和方法。 */
 class HTMLCanvasElement extends HTMLElement {
@@ -32,110 +34,87 @@ class HTMLCanvasElement extends HTMLElement {
     transferControlToOffscreen(): OffscreenCanvas;
 }
 ```
+
 ## CanvasRenderingContext2D
+
 ```js
 class CanvasRenderingContext2D {
-  canvas: HTMLCanvasElement;// canvas只读引用
-  width: number;// 画布元素的高度。
-  height: number;// 画布元素的宽度。
-  // 对于没有直接固定到特定画布的上下文
-  commit(): void;
+  canvas: HTMLCanvasElement;//【属性】canvas只读引用
+  width: number;//【属性】画布元素的高度。
+  height: number;//【属性】画布元素的宽度。
   
-  // 状态
-  // 保存 当前状态 到堆栈上
-  save(): void;
-  // 弹出 图形状态堆栈中的 顶部条目
-  restore(): void;
+  commit(): void;//【方法】对于没有直接固定到特定画布的上下文
+  
+  // 状态管理
+  save(): void;//【方法】保存当前状态到堆栈上
+  restore(): void;//【方法】恢复到上次保存的状态
 
-  // 转换
-  currentTransform: SVGMatrix;// 当前的变换
-  // 缩放 水平或垂直
-  scale(x: number, y: number): void;
-  // 旋转（弧度 = 角度 * Math.PI / 180）
-  rotate(angle: number): void;
-  // 移动
-  translate(x: number, y: number): void;
-  // 缩放、旋转、平移（不会覆盖）
-  transform(a: number, b: number, c: number, d: number, e: number, f: number): void;
-  // 重新设置当前的变换（覆盖）
-  setTransform(a: number, b: number, c: number, d: number, e: number, f: number): void;
-  // 重新设置
-  resetTransform(): void;
+  // 坐标系变换
+  currentTransform: SVGMatrix;//【属性】当前的变换
+  scale(x: number, y: number): void;//【方法】（坐标系）水平&垂直缩放
+  rotate(angle: number): void;//【方法】（坐标系）旋转弧度（弧度 = 角度 * Math.PI / 180）
+  translate(x: number, y: number): void;//【方法】（坐标系）水平&垂直移动
+  transform(a: number, b: number, c: number, d: number, e: number, f: number): void;//【方法】（坐标系）矩阵变换：缩放(a,d)、旋转(b,c)、平移(e,f)（相对变换矩阵，在之前基础上变换）
+  setTransform(a: number, b: number, c: number, d: number, e: number, f: number): void;//【方法】（坐标系）矩阵变换：缩放(a,d)、旋转(b,c)、平移(e,f)（绝对变换矩阵，取消之前变换设置成新的变换）
+  resetTransform(): void;//【方法】重新设置
 
   // 合成
-  globalAlpha: number;// 设置图形和图片透明度的属性(0.0-1.0)
-  globalCompositeOperation: string;// 设置绘制新形状时应用的合成操作的类型
+  globalAlpha: number;//【属性】设置透明度(0.0-1.0)
+  globalCompositeOperation: string;//【属性】设置绘制新形状时应用的合成操作的类型
 
   // 图像的平滑
-  imageSmoothingEnabled: boolean;// 设置图片是否平滑
-  imageSmoothingQuality: 'low' | 'medium' | 'high';// 设置图像平滑度的属性
+  imageSmoothingEnabled: boolean;//【属性】设置图片是否平滑
+  imageSmoothingQuality: 'low' | 'medium' | 'high';//【属性】设置图像平滑度
 
   // 过滤器
-  filter: string;// 提供模糊、灰度等过滤效果的属性
+  filter: string;//【属性】提供模糊、灰度等过滤效果的属性
 
-  // 颜色和款式
-  strokeStyle: string | CanvasGradient | CanvasPattern;// 描述画笔（绘制图形）颜色或者样式的属性
-  fillStyle: string | CanvasGradient | CanvasPattern;// 使用内部方式描述颜色和样式的属性
-  // 根据两个给定的坐标值所构成的线段创建一个线性渐变，返回值赋值给 fillStyle 或者 strokeStyle。
-  createLinearGradient(x0: number, y0: number, x1: number, y1: number): CanvasGradient;
-  // 根据参数确定两个圆的坐标，绘制放射性渐变的方法
-  createRadialGradient(x0: number, y0: number, r0: number, x1: number, y1: number, r1: number): CanvasGradient;
-  // 使用指定的图像
-  createPattern(image: CanvasImageSource, repetition: ?string): CanvasPattern;
+  // 填充or描边颜色设置
+  strokeStyle: string | CanvasGradient | CanvasPattern;//【属性】设置上下文颜色(描边)
+  fillStyle: string | CanvasGradient | CanvasPattern;//【属性】设置上下文颜色(填充)
+  createLinearGradient(x0: number, y0: number, x1: number, y1: number): CanvasGradient;//【方法】两点之间构建线性渐变，返回值赋值给 fillStyle 或者 strokeStyle
+  createRadialGradient(x0: number, y0: number, r0: number, x1: number, y1: number, r1: number): CanvasGradient;//【方法】两圆之间构建放射性渐变
+  createPattern(image: CanvasImageSource, repetition: ?string): CanvasPattern;//【方法】图像背景（填充），返回值赋值给 fillStyle
+  createConicGradient(startAngle, x, y): CanvasGradient;//【方法】指定点周围创建渐变（开始弧度，坐标x，坐标y）
 
   // 阴影
-  shadowOffsetX: number;// 描述阴影水平偏移距离的属性
-  shadowOffsetY: number;// 描述阴影垂直偏移距离的属性
-  shadowBlur: number;// 描述模糊效果程度的属性
-  shadowColor: string;// 描述阴影颜色的属性
+  shadowOffsetX: number;//【属性】阴影水平偏移距离
+  shadowOffsetY: number;//【属性】阴影垂直偏移距离
+  shadowBlur: number;//【属性】模糊效果程度
+  shadowColor: string;//【属性】阴影颜色
 
-  // 矩形
-  // 通过把像素设置为透明以达到擦除一个矩形区域的目的(x坐标，y坐标，宽，高)
-  clearRect(x: number, y: number, w: number, h: number): void;
-  // 绘制填充矩形的方法(x坐标，y坐标，宽，高)
-  fillRect(x: number, y: number, w: number, h: number): void;
-  // 描绘一个起点在 (x, y)、宽度为 w、高度为 h 的矩形的方法(x坐标，y坐标，宽，高)
-  strokeRect(x: number, y: number, w: number, h: number): void;
+  // 画矩形操作
+  clearRect(x: number, y: number, w: number, h: number): void;//【方法】清除区域(x坐标，y坐标，宽，高)【透明】
+  fillRect(x: number, y: number, w: number, h: number): void;//【方法】绘制填充矩形(x坐标，y坐标，宽，高)
+  strokeRect(x: number, y: number, w: number, h: number): void;//【方法】绘制描边矩形(x坐标，y坐标，宽，高)
 
-  // 路径API
-  // 通过清空子路径列表开始一个新路径的方法。当你想创建一个新的路径时，调用此方法。
-  beginPath(): void;
-  // （填充）根据当前的填充样式，填充当前或已存在的路径的方法。采取非零环绕或者奇偶环绕规则
-  fill(fillRule?: CanvasFillRule): void;
+  // 画路径操作
+  beginPath(): void;//【方法】清空之前子路径，开始新的路径绘制
+  fill(fillRule?: CanvasFillRule): void;//【方法】（填充）根据当前的填充样式，填充当前或已存在的路径。采取非零环绕或者奇偶环绕规则
   fill(path: Path2D, fillRule?: CanvasFillRule): void;
-  // （绘制线）使用非零环绕规则，根据当前的画线样式，绘制当前或已经存在的路径的方法
-  stroke(): void;
+  stroke(): void;//【方法】（描边）使用非零环绕规则，根据当前的画线样式，绘制当前或已经存在的路径
   stroke(path: Path2D): void;
-  // 用来给当前路径或特定路径绘制焦点的方法，如果给定的元素获取了焦点。
-  drawFocusIfNeeded(element: Element): void;
+  drawFocusIfNeeded(element: Element): void;//【方法】用来给当前路径或特定路径绘制焦点的方法，如果给定的元素获取了焦点。
   drawFocusIfNeeded(path: Path2D, element: Element): void;
-  // 将当前或给定的路径滚动到窗口的方法
-  scrollPathIntoView(): void;
+  scrollPathIntoView(): void;//【方法】将当前或给定的路径滚动到窗口的方法
   scrollPathIntoView(path: Path2D): void;
-  // 将当前创建的路径设置为当前剪切路径的方法
-  clip(fillRule?: CanvasFillRule): void;
+  clip(fillRule?: CanvasFillRule): void;//【方法】路径裁剪（裁剪出有效区域，浏览器会将后面所有的绘图操作都限制在本区域内执行）
   clip(path: Path2D, fillRule?: CanvasFillRule): void;
   resetClip(): void;
-  // 用于判断在当前路径中是否包含检测点的方法
-  isPointInPath(x: number, y: number, fillRule?: CanvasFillRule): boolean;
+  isPointInPath(x: number, y: number, fillRule?: CanvasFillRule): boolean;//【方法】用于判断在当前路径中是否包含检测点的方法
   isPointInPath(path: Path2D, x: number, y: number, fillRule?: CanvasFillRule): boolean;
-  // 用于检测某点是否在路径的描边线上的方法
-  isPointInStroke(x: number, y: number): boolean;
+  isPointInStroke(x: number, y: number): boolean;//【方法】用于检测某点是否在路径的描边线上的方法
   isPointInStroke(path: Path2D, x: number, y: number): boolean;
 
-  // 文本(参见CanvasDrawingStyles接口)
-  // 在指定的坐标上绘制文本字符串
-  fillText(text: string, x: number, y: number, maxWidth?: number): void;
-  // 在给定的 (x, y) 位置绘制文本的方法
-  strokeText(text: string, x: number, y: number, maxWidth?: number): void;
-  // 被测量文本信息
-  measureText(text: string): TextMetrics;
+  // 画文本操作
+  fillText(text: string, x: number, y: number, maxWidth?: number): void;//【方法】（填充）在指定的坐标上绘制文本
+  strokeText(text: string, x: number, y: number, maxWidth?: number): void;//【方法】（描边）在给定的 (x, y) 位置绘制文本
+  measureText(text: string): TextMetrics;//【方法】测量文本信息
 
-  // 画图片
-  // 在画布（Canvas）上绘制图像的方式
-  drawImage(image: CanvasImageSource, dx: number, dy: number): void;
-  drawImage(image: CanvasImageSource, dx: number, dy: number, dw: number, dh: number): void;
-  drawImage(image: CanvasImageSource, sx: number, sy: number, sw: number, sh: number, dx: number, dy: number, dw: number, dh: number): void;
+  // 画图片操作
+  drawImage(image: CanvasImageSource, dx: number, dy: number): void;//【方法】绘图+移动
+  drawImage(image: CanvasImageSource, dx: number, dy: number, dw: number, dh: number): void;//【方法】绘图+移动+缩放（dx,dy,dw,dh视图）
+  drawImage(image: CanvasImageSource, sx: number, sy: number, sw: number, sh: number, dx: number, dy: number, dw: number, dh: number): void;//【方法】绘图+裁剪+移动+缩放（sx,sy,sw,sh相机视口、dx,dy,dw,dh视图）
 
   // 点击区域
   addHitRegion(options?: HitRegionOptions): void;
@@ -143,56 +122,68 @@ class CanvasRenderingContext2D {
   clearHitRegions(): void;
 
   // 像素操作
-  // 创建一个新的、空白的、指定大小的 ImageData 对象。所有的像素在新对象中都是透明的
-  createImageData(sw: number, sh: number): ImageData;
+  createImageData(sw: number, sh: number): ImageData;//【方法】创建一个新的、空白的、指定大小的 ImageData 对象。所有的像素在新对象中都是透明的
   createImageData(imagedata: ImageData): ImageData;
-  // 获取描述 canvas 区域隐含的像素数据
-  getImageData(sx: number, sy: number, sw: number, sh: number): ImageData;
+  getImageData(sx: number, sy: number, sw: number, sh: number): ImageData;//【方法】获取描述 canvas 区域隐含的像素数据
   putImageData(imagedata: ImageData, dx: number, dy: number): void;
   putImageData(imagedata: ImageData, dx: number, dy: number, dirtyX: number, dirtyY: number, dirtyWidth: number, dirtyHeight: number): void;
 
-  // 画布绘画风格
-  lineWidth: number;// 设置线段厚度的属性（即线段的宽度）
-  lineCap: string;// 指定如何绘制每一条线段末端的属性
-  lineJoin: string;// 用来设置 2 个长度不为 0 的相连部分（线段、圆弧、曲线）如何连接在一起的属性
-  miterLimit: number;// 设置斜接面限制比例的属性
+  // 线粗细、端点拐角样式
+  lineWidth: number;//【属性】设置线段厚度（描边）
+  lineCap: string;//【属性】线段端点样式（描边）
+  lineJoin: string;//【属性】线段拐角样式（描边）
+  miterLimit: number;//【属性】拐角最大厚度（描边）
 
   // 虚线
-  // 填充线时使用虚线模式
-  setLineDash(segments: Array<number>): void;
-  // 获取当前线段样式的方法
-  getLineDash(): Array<number>;
-  lineDashOffset: number;// 设置虚线偏移量的属性
+  setLineDash(segments: Array<number>): void;//【方法】描边设置为虚线（[实、虚、实、虚....]）
+  getLineDash(): Array<number>;//【方法】获取当前线段样式的方法
+  lineDashOffset: number;//【属性】设置虚线偏移量
 
-  // 文本
-  font: string;// 当前字体样式
-  textAlign: string;// 文本的对齐方式
-  textBaseline: string;// 当前文本基线
-  direction: string;// 当前文本方向
+  // 文本样式
+  font: string;//【属性】当前字体样式
+  textAlign: string;//【属性】文本的对齐方式
+  textBaseline: string;//【属性】当前文本基线
+  direction: string;//【属性】当前文本方向
 
-  // 路径方法
-  // 共享路径API方法
-  // 将笔点连到当前子路径起始点的方法
-  closePath(): void;
-  // 将一个新的子路径的起始点移动到 (x，y) 坐标的方法。
-  moveTo(x: number, y: number): void;
-  // 使用直线连接子路径的终点到 x，y 坐标的方法
-  lineTo(x: number, y: number): void;
-  // 新增二次贝塞尔曲线路径的方法（控制点x,控制点y,端点x,端点y）
-  quadraticCurveTo(cpx: number, cpy: number, x: number, y: number): void;
-  // 绘制三次贝赛尔曲线路径的方法（控制点x,控制点y,控制点x2,控制点y2,端点x,端点y）
-  bezierCurveTo(cp1x: number, cp1y: number, cp2x: number, cp2y: number, x: number, y: number): void;
-  // 根据控制点和半径绘制圆弧路径，使用当前的描点 (前一个 moveTo 或 lineTo 等函数的止点)（控制点x,控制点y,控制点x2,控制点y2,弧度）
-  arcTo(x1: number, y1: number, x2: number, y2: number, radius: number): void;
+  // 画路径操作
+  closePath(): void;//【方法】将笔点连到当前子路径起始点的方法
+  moveTo(x: number, y: number): void;//【方法】将一个新的子路径的起始点移动到 (x，y) 坐标
+  lineTo(x: number, y: number): void;//【方法】使用直线连接子路径的终点到 x，y 坐标
+  quadraticCurveTo(cpx: number, cpy: number, x: number, y: number): void;//【方法】新增二次贝塞尔曲线路径（控制点x,控制点y,端点x,端点y）
+  bezierCurveTo(cp1x: number, cp1y: number, cp2x: number, cp2y: number, x: number, y: number): void;//【方法】绘制三次贝赛尔曲线路径（控制点x,控制点y,控制点x2,控制点y2,端点x,端点y）
+  arcTo(x1: number, y1: number, x2: number, y2: number, radius: number): void;//【方法】根据控制点和半径绘制圆弧路径，使用当前的描点 (前一个 moveTo 或 lineTo 等函数的止点)（控制点x,控制点y,控制点x2,控制点y2,弧度）
   arcTo(x1: number, y1: number, x2: number, y2: number, radiusX: number, radiusY: number, rotation: number): void;
-  // 创建矩形路径的方法，矩形的起点位置是 (x, y)，尺寸为 width 和 height。矩形的 4 个点通过直线连接，子路径做为闭合的标记，所以你可以填充或者描边矩形
-  rect(x: number, y: number, w: number, h: number): void;
-  // 绘制圆弧路径的方法(x,y,半径,开始弧度,结束弧度,是否逆时针方向)
-  arc(x: number, y: number, radius: number, startAngle: number, endAngle: number, anticlockwise?: boolean): void;
-  // 添加椭圆路径的方法
-  ellipse(x: number, y: number, radiusX: number, radiusY: number, rotation: number, startAngle: number, endAngle: number, anticlockwise?: boolean): void;
+  rect(x: number, y: number, w: number, h: number): void;//【方法】创建矩形路径的方法，矩形的起点位置是 (x, y)，尺寸为 width 和 height。矩形的 4 个点通过直线连接，子路径做为闭合的标记，所以你可以填充或者描边矩形
+  arc(x: number, y: number, radius: number, startAngle: number, endAngle: number, anticlockwise?: boolean): void;//【方法】绘制圆弧路径(x,y,半径,开始弧度,结束弧度,是否逆时针方向)
+  ellipse(x: number, y: number, radiusX: number, radiusY: number, rotation: number, startAngle: number, endAngle: number, anticlockwise?: boolean): void;//【方法】添加椭圆路径的方法
 }
 ```
+
+## Path2D CanvasPath
+
+```js
+interface CanvasPath {
+    arc(x: number, y: number, radius: number, startAngle: number, endAngle: number, anticlockwise?: boolean): void;
+    arcTo(x1: number, y1: number, x2: number, y2: number, radius: number): void;
+    bezierCurveTo(cp1x: number, cp1y: number, cp2x: number, cp2y: number, x: number, y: number): void;
+    closePath(): void;
+    ellipse(x: number, y: number, radiusX: number, radiusY: number, rotation: number, startAngle: number, endAngle: number, anticlockwise?: boolean): void;
+    lineTo(x: number, y: number): void;
+    moveTo(x: number, y: number): void;
+    quadraticCurveTo(cpx: number, cpy: number, x: number, y: number): void;
+    rect(x: number, y: number, w: number, h: number): void;
+}
+```
+
+```js
+interface Path2D extends CanvasPath {
+    /**
+     * Adds to the path the path given by the argument.
+     */
+    addPath(path: Path2D, transform?: DOMMatrix2DInit): void;
+}
+```
+
 ## ImageBitmapRenderingContext
 
 ## WebGLRenderingContext
