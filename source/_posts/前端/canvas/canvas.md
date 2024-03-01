@@ -10,7 +10,7 @@ tags:
 - Canvas API提供了一个通过`JS`和`HTML`的`<canvas>`元素来绘制图形的方式。它可以用于动画、游戏画面、数据可视化、图片编辑以及实时视频处理等方面。
 - https://www.cnblogs.com/fangsmile/category/849399.html?page=3
 
-## Canvas教程
+## Canvas入门
 - https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial
 - canvas坐标原点在左上角：向右是x轴正方向，向下是y轴正方向
 - 学习的话主要是看API和例子
@@ -21,13 +21,15 @@ tags:
 - demo：https://techbrood.com/?q=canvas
 - demo：https://codepen.io/search/pens?q=canvas
 
-
-## Canvas深入
-- https://joshondesign.com/p/books/canvasdeepdive/toc.html
+## Canvas进阶
+- 动画
+    - HTML5+JavaScript动画基础(中文完整版).
+- 游戏
+    - HTML5游戏开发
+    - 小鸟飞行，https://www.cnblogs.com/xing901022/p/5094550.html
 
 ## 数学基础
-- 向量，矩阵运算
-- https://www.leapreal.com/posts/db6f6769.html
+- 向量，矩阵运算，https://www.leapreal.com/posts/db6f6769.html
 
 ## 第三方库
 - [EaselJS](https://www.createjs.com/easeljs) 使制作游戏、创作类艺术和其他侧重图形项目更容易的开源 canvas 库
