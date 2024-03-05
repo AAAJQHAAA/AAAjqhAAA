@@ -1,5 +1,5 @@
 ---
-title: vue脚手架element-ui按需引入
+title: vue2脚手架element-ui按需引入
 date: 2024-02-04 14:10:33
 category: 前端
 tags:
@@ -7,7 +7,7 @@ tags:
   - element-ui
 ---
 
-# vue脚手架element-ui按需引入
+# vue2脚手架element-ui按需引入
 - 官网教程：`https://element.eleme.cn/#/zh-CN/component/quickstart`
 - 安装：
   - `npm i element-ui -S`
