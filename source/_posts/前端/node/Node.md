@@ -6,6 +6,7 @@ tags:
   - node
 ---
 # nodeJS
-- `node -v`
+- 中文网站：https://nodejs.cn/
+- 官网：https://nodejs.org/
 
 
