@@ -25,3 +25,54 @@ tags:
     - async 关键字：用于声明一个异步函数，该函数将返回一个 Promise 对象，
     - await 关键字：可以等待一个 Promise 对象的解决，并返回其结果
 
+# 概念
+- 非阻塞IO，IO密集，事件驱动
+- 进程：一个运行的程序
+- 线程：进程内一个独立可调度的执行单元
+- nodejs工作模型
+    - 事件驱动主进程是单线程模型
+    - IO是操作系统底层多线程调度
+    - 注意：单线程并不是单进程
+# global全局对象
+- CommonJS：module.exports、exports
+- Buffer
+- console
+- process
+- timer
+
+- process.nextTick(()=>{})：当前事件队列尾
+- setTimeout(()=>{},0)
+- setImmediate(()=>{})：下一个事件队列首 
+
+# 调试
+- Inspector
+    - 1、（无用）debugger[官网调试器](https://nodejs.cn/api/debugger.html)
+    - 2、`node --inspect-brk myscript.js`
+        - 浏览器打开：`chrome://inspect`
+        - 打断点、下一个断点、进入、跳过
+- vscode
+    - 打断点、调试
+
+# 基础
+- `__dirname`、`__filename`返回文件绝对路径
+- `process.cwd()`返回node命令启动路径
+- `./` 当前文件所在文件夹
+- Buffer
+    - 处理二进制数据流
+    - 大小固定
+    - 内存是v8堆外c++内存
+- Events：事件处理
+- fs：文件操作
+
+
+
+
+
+
+
+
+
+
+
+
+
