@@ -15,3 +15,10 @@ tags:
 - [mediasoup-broadcaster-demo](https://github.com/versatica/mediasoup-broadcaster-demo/)：基于libmediasoupclient的C++应用程序，将系统麦克风和网络摄像头生成到mediasoup演示中。
 - [mediasoup-website](https://github.com/versatica/mediasoup-website/)：项目网站 https://mediasoup.org
 
+## 环境配置
+### windows环境
+- `node`
+- `python`：[安装](https://cloud.tencent.com/developer/article/1580729)
+- `chcp 65001`cmd命令行中文
+- `npm cache verify`
+- `npm cache clean --force`
