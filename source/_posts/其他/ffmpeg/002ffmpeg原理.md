@@ -1,0 +1,16 @@
+# ffmpeg原理学习
+- https://ffmpeg.xianwaizhiyin.net/base-knowledge/raw-rgb.html
+## 音视频基础知识
+## ffmpeg基础
+## 编译链接基础知识
+## msys2从入门到精通
+## ffmpeg调试环境搭建
+## ffmpeg编译教程-高级篇
+## 如何引入ffmpeg的API库
+## ffmpeg数据结构详解
+## ffmpeg滤镜API教程
+## ffmpeg高级API教程
+## Libavutil库介绍
+## ffmpeg编译过程分析
+## ffplay.c源码分析
+## ffmpeg.c源码分析
