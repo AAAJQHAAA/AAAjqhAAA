@@ -21,7 +21,15 @@
 - 问题PKG_CONFIG_PATH与LD_LIBRARY_PATH区别
 ### C基础回顾
 ### Swift语言
-### 各平台ffmpeg编译
+### 各平台ffmpeg编译安装
+- mac上brew方式安装，不能改变功能
+    - brew search ffmpeg
+    - brew install ffmpeg
+- 使用源码编译安装，可以更新功能
+    - 下载源码：`https://ffmpeg.org/download.html`
+    - 编译：`./configure --prefix=/usr/local/ffmpeg --enable-debug=3`
+        - `make -j 4`
+        - `make install`
 ## 音频
 ### 音频基础知识
 ### 音频编码原理
